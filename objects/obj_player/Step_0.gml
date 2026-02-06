@@ -1,10 +1,7 @@
 /// @description Inserir descrição aqui
 // Você pode escrever seu código neste editor
 
-//Colocando Gravidade
-gravidadeh();
+movi()
+colisao();
 
-
-
-
-show_debug_message(gravh);
+show_debug_message(x);

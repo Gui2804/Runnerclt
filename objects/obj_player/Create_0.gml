@@ -3,43 +3,53 @@
 
 //Variaveis que eu vou precisar
 velh = 0;
-max_velh = 5;
-gravh = -1; //Gravidade horizontal
+acel = .1;
+max_velh = 2;
 xscale = 1; //Escala horizontal do player
 
 
-gravidadeh = function()
+//Fazendo o sistema de colisão dele
+colisao = function()
 {
-    var _space = keyboard_check_pressed(vk_space);
-    //Se eu apertar espaço e eu estiver colidindo do lado esquerdo dele
-    //eu vou voltar a ter um
-    //Criando uma variavel para a colisão
-    var _colih = place_meeting(x, y, obj_colisor.bbox_left)
-    if (_space and _colih)
-    {
-        gravh = 1;
-        
-        show_message("oiiiiii")
-    }
-    
-    var _colih2 = place_meeting(x, y, obj_colisor.bbox_right);
-    if (_space and _colih2)
-    {
-        gravh = -1;
-        
-        show_message("oiiiiii")
-    }
-    //Adicionando a Gravidade horizontal
-    x += gravh;
+    //Usando move and collide
+    move_and_collide(velh, 0, obj_colisor, 12);
 }
 
-//Mudando gravidade do player
-muda_lado_gravidade = function()
+//Fazendo a movimentação dele
+movi = function()
 {
-    //Se eu apertar espaço, eu vou mudar de lado
-    if (space)
+    //Pegando os inputs
+    var _right, _left
+    
+    //Esquerda e direita 
+    _right = keyboard_check(ord("D"));
+    _left = keyboard_check(ord("A"));
+    
+    //Atribuindo esses valores ao Velh
+    velh = (_right - _left) * max_velh;
+    
+    //Só fazendo isso se eu apertei alguma tecla
+    if ((_left xor _right))  
     {
-        //Mudando de lado
-        gravh *= -1;
+        //Pegando a direção em que o player está indo
+        var _dir = point_direction(0, 0, (_right - _left), 0);
+        
+        //Adicionando a direção ao velh e velv
+        //Fazendo o player deslizar na tela do jogo
+        var _max_velh = lengthdir_x(max_velh, _dir);
+        velh = lerp(velh, _max_velh, acel); 
+    }
+    //Senão eu não me movo
+    else 
+    {
+        //Desacelerando 
+        velh = lerp(velh, 0, acel);
     }
 }
+
+
+
+
+
+
+
