@@ -3,5 +3,6 @@
 
 movi()
 colisao();
+inverte_escala();
 
-show_debug_message(x);
+show_debug_message(xscale);
