@@ -23,6 +23,8 @@
   ],
   "ResourceOrderSettings":[
     {"name":"obj_colisor","order":1,"path":"objects/obj_colisor/obj_colisor.yy",},
+    {"name":"obj_control","order":3,"path":"objects/obj_control/obj_control.yy",},
+    {"name":"obj_inimigo","order":2,"path":"objects/obj_inimigo/obj_inimigo.yy",},
     {"name":"spr_batatas","order":1,"path":"sprites/spr_batatas/spr_batatas.yy",},
     {"name":"spr_colisor","order":1,"path":"sprites/spr_colisor/spr_colisor.yy",},
     {"name":"spr_coxinhas","order":2,"path":"sprites/spr_coxinhas/spr_coxinhas.yy",},

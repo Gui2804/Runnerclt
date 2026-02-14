@@ -58,7 +58,7 @@ inverte_escala = function()
         //Invertendo a escala dele
         xscale = lerp(xscale, -1, .1);
     }
-    else
+    if (x < _hori_room + 16)
     {
         xscale = lerp(xscale, 1, .1);
     }

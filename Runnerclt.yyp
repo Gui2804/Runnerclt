@@ -42,6 +42,8 @@
   "name":"Runnerclt",
   "resources":[
     {"id":{"name":"obj_colisor","path":"objects/obj_colisor/obj_colisor.yy",},},
+    {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
+    {"id":{"name":"obj_inimigo","path":"objects/obj_inimigo/obj_inimigo.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"spr_batatas","path":"sprites/spr_batatas/spr_batatas.yy",},},
