@@ -3,3 +3,5 @@
 
 //Caindo
 y++;
+
+lado_certo();
